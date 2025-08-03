@@ -110,13 +110,13 @@
     }
     .hero-video {
         position: relative;
-        width: 568px; /* Based on original iframe width */
-        height: 360px; /* Based on original iframe height */
+        width: 568px; 
+        height: 360px;
         max-width: 100%;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        background-color: black; /* Placeholder background */
+        background-color: black;
         overflow: hidden;
     }
     .hero-video img.youtube-thumbnail {
@@ -142,7 +142,7 @@
         width: 100%;
         height: 100%;
         border: none;
-        display: block; /* Ensure it takes full space */
+        display: block;
     }
     /* Responsive adjustments for Critical CSS */
     @media (max-width: 1440px) { .logo-img { left: 100px; } }
@@ -354,10 +354,9 @@
           iframe.setAttribute('allowfullscreen', '');
           iframe.setAttribute('frameborder', '0');
           iframe.setAttribute('title', 'AI Agents, Clearly Explained');
-          // No loading="lazy" for dynamically loaded iframes above the fold, if it's the LCP.
-          // If this section is always below the fold, you could add it back.
+
           
-          videoWrapper.innerHTML = ''; // Clear thumbnail and button
+          videoWrapper.innerHTML = '';
           videoWrapper.appendChild(iframe);
         });
       }
