@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Bravium AI | Strony WWW + Reklamy + AI = Więcej Klientów</title>
+  <meta name="description" content="Bravium AI: Strony WWW + reklamy Google + chatboty AI = więcej klientów. Automatyzacja sprzedaży dla firm. Darmowa konsultacja.">
+  <meta name="keywords" content="strony www, reklamy Google, chatbot AI, generowanie leadów, automatyzacja sprzedaży">
+  <link rel="canonical" href="https://braviumai.agency" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://www.youtube.com"> <link rel="preconnect" href="https://i.ytimg.com"> <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #111827;
+        background: #fff;
+        overflow-x: hidden;
+    }
+    .container {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .header {
+        position: relative;
+        width: 100%;
+        height: 142px;
+        background: #2970E4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .logo-img {
+        height: 109px;
+        width: auto;
+        position: absolute;
+        left: 323px;
+    }
+    .text-logo {
+        height: 103px;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hero {
+        padding: 4rem 0;
+        background: #fff;
+    }
+    .hero-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
+    }
+    .hero-text {
+        flex: 1;
+        min-width: 300px;
+        padding-right: 2rem;
+    }
+    .hero-text h1 {
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 48px;
+        color: #000000;
+        margin-bottom: 1.5rem;
+    }
+    .hero-text p {
+        font-family: 'Poppins', sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        margin-bottom: 2rem;
+    }
+    .hero-button {
+        display: inline-block;
+        width: 640px;
+        max-width: 100%;
+        height: 48px;
+        background-color: #2970E4;
+        color: white;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 48px;
+        text-align: center;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .hero-video {
+        position: relative;
+        width: 568px; /* Based on original iframe width */
+        height: 360px; /* Based on original iframe height */
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        background-color: black; /* Placeholder background */
+        overflow: hidden;
+    }
+    .hero-video img.youtube-thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .hero-video .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        background: url('img/youtube_play_button.png') no-repeat center center; /* You might need to create this image */
+        background-size: contain;
+        z-index: 10;
+    }
+    .hero-video iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block; /* Ensure it takes full space */
+    }
+    /* Responsive adjustments for Critical CSS */
+    @media (max-width: 1440px) { .logo-img { left: 100px; } }
+    @media (max-width: 1024px) { .header { height: 120px; } .logo-img { height: 80px; left: 50px; } .text-logo { height: 70px; } }
+    @media (max-width: 768px) {
+        .header { height: 100px; flex-direction: column; justify-content: center; padding: 15px 0; }
+        .header-content { justify-content: center; flex-wrap: wrap; }
+        .logo-img { position: relative; left: auto; height: 60px; margin-right: 15px; }
+        .text-logo { position: relative; left: auto; transform: none; height: 50px; }
+        .hero-text { padding-right: 0; margin-bottom: 2rem; }
+        .hero-text h1 { font-size: 32px; line-height: 42px; margin-bottom: 1.25rem; }
+        .hero-text p { font-size: 15px; margin-bottom: 1.5rem; }
+        .hero-button { width: 100%; font-size: 18px; }
+        .hero-media { width: 100%; }
+        .hero-video { height: 250px; }
+    }
+    @media (max-width: 480px) {
+        .header { height: auto; padding: 10px 0; }
+        .logo-img { height: 45px; margin-right: 10px; }
+        .text-logo { height: 35px; }
+        .hero { padding: 3rem 0; }
+        .hero-text h1 { font-size: 28px; line-height: 38px; margin-bottom: 1rem; }
+        .hero-text p { font-size: 14px; line-height: 22px; }
+        .hero-video { height: 200px; }
+        .hero-button { font-size: 16px; height: 42px; line-height: 42px; }
+    }
+  </style>
+
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
+  
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Bravium AI Agency",
+    "description": "Tworzymy strony internetowe i systemy AI generujące klientów 24/7",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PL"
+    },
+    "service": [
+      {
+        "@type": "Service",
+        "name": "Projektowanie stron WWW",
+        "description": "Strony konwertujące leady"
+      },
+      {
+        "@type": "Service",
+        "name": "Kampanie reklamowe",
+        "description": "Reklamy Google/Facebook z ROI"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  
+  <header class="header">
+    <div class="container header-content">
+      <img alt="Bravium AI Logo - Agencja marketingu AI" class="logo-img" src="img/Bravium_AI_Agency_transparent.png" width="200" height="60" fetchpriority="high"/>
+      <img alt="Bravium AI Text" class="text-logo" src="img/Bravium_AI_Agency_text_only.png" width="300" height="40"/>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Dlaczego 90% stron internetowych nie sprzedaje?</h1>
+          <p>W Bravium tworzymy nowoczesne strony www, które nie tylko dobrze wyglądają – one konwertują. A dzięki skutecznym reklamom i AI agentom, Twoja firma działa jak maszyna do pozyskiwania klientów 24/7:</p>
+          <ul>
+            <li>Strony www zbudowane pod konwersję</li>
+            <li>Kampanie Google/Facebook z realnym ROI</li>
+            <li>AI chatboty i rozmówcy, którzy działają bez przerwy</li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <div class="hero-video">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/FwOTs4UxQS4" title="AI Agents, Clearly Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <a class="hero-button" href="https://calendly.com/bravo-ai-agency/45min">Tylko 3 wolne terminy w tym tygodniu →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="divider-text">💡 Reklamy przyciągają ruch. AI zamyka sprzedaż.</div>
+  </div>
+
+  <section class="formula">
+    <div class="container">
+      <h3>Zwycięska Formuła</h3>
+      <div class="formula-grid">
+        <div class="formula-item">
+          <img alt="Star icon" height="44" src="img/star.png" width="44" loading="lazy"/>
+          <h4>Strony internetowe z konwersją w DNA</h4>
+          <p>Tworzymy responsywne, nowoczesne strony www, które robią wrażenie i realizują cel: generują zapytania, sprzedają, zapisują na konsultacje. UX/UI, szybkość, SEO – wszystko dopięte na ostatni piksel.</p>
+        </div>
+        <div class="formula-item">
+          <img alt="Star icon" height="44" src="img/star.png" width="44" loading="lazy"/>
+          <h4>Reklamy Google & Facebook</h4>
+          <p>Twoja nowa strona potrzebuje ruchu – i my go dostarczamy. Kampanie prowadzone przez nas trafiają dokładnie tam, gdzie trzeba. Dane, strategia i AI – połączone, by zdobywać realnych klientów.</p>
+        </div>
+        <div class="formula-item">
+          <img alt="Star icon" height="44" src="img/star.png" width="44" loading="lazy"/>
+          <h4>AI chatboty i rozmówcy</h4>
+          <p>Gdy klient trafi na Twoją stronę, wita go AI chatbot, który natychmiast nawiązuje kontakt. Zbiera dane, odpowiada na pytania, umawia spotkania. A jeśli trzeba – rozmówca AI zadzwoni i domknie sprzedaż.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="divider-text">🏃‍♂️ Przestań gonić za leadami. Zacznij umawiać zlecenia.</div>
+  </div>
+
+  <section class="testimonials">
+    <div class="container">
+      <h3>Co mówią nasi klienci...</h3>
+      <div class="testimonial-grid">
+        <div class="testimonial-item">
+          <span class="stars">★★★★★</span>
+          "Strona od Bravium zwiększyła nasze konwersje o 150%. Wcześniej mieliśmy ładny wizytówkowy site – teraz mamy maszynę do leadów."
+          <p>– Marek K., Agencja Marketingowa</p>
+        </div>
+        <div class="testimonial-item">
+          <span class="stars">★★★★★</span>
+          "Prowadziliśmy reklamy, ale leady przepadały, bo nikt nie odpisywał na czas. Odkąd dodaliśmy chatbota i rozmówcę AI, to jakbyśmy mieli pełnoetatowego sprzedawcę 24/7."
+          <p>– Anna Z., Salon Kosmetyczny</p>
+        </div>
+        <div class="testimonial-item">
+          <span class="stars">★★★★★</span>
+          "Szczerze mówiąc, byłem sceptyczny wobec rozmówców AI, ale to niesamowite. Odpowiadają natychmiast, mówią naturalnie i umawiają realne spotkania. Nasz proces sprzedażowy jest teraz o wiele płynniejszy."
+          <p>– Tomasz W., Kancelaria Prawna</p>
+        </div>
+        <div class="testimonial-item">
+          <span class="stars">★★★★★</span>
+          "Połączenie reklam i AI zmieniło wszystko. Kiedyś traciliśmy godziny na odpisywanie. Teraz chatbot prowadzi rozmowę, kwalifikuje klientów i zapisuje ich do naszego kalendarza. Mamy 3 razy więcej spotkań niż wcześniej."
+          <p>– Katarzyna P., Biuro Architektoniczne</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="divider-text">👋 Pierwsze wrażenie ma znaczenie. Niech AI je zrobi.</div>
+  </div>
+
+  <section class="hero"> <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Dlaczego warto nas wybrać?</h2>
+          <h3>Projektujemy strony które generują leady 24/7</h3>
+          <p>Strony, reklamy, automatyzacja – wszystko połączone w jedną, działającą całość.</p>
+          <ul>
+            <li>Strona, która konwertuje</li>
+            <li>Reklamy, które trafiają do gotowych klientów</li>
+            <li>Automatyzacje, które działają, gdy Ty śpisz</li>
+            <li>Skalowalność bez zatrudniania nowych ludzi</li>
+          </ul>
+        </div>
+        <div class="hero-video">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/FwOTs4UxQS4" title="AI Agents, Clearly Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Gotowy na stronę, która naprawdę robi robotę?</h2>
+      <p>Umów się na bezpłatną konsultację – pokażemy Ci, jak połączyć skuteczny design, reklamę i AI w jeden działający system sprzedaży.</p>
+      <a class="cta-button" href="https://calendly.com/bravo-ai-agency/45min">Zarezerwuj konsultację teraz →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61575875885258"><img alt="Facebook" height="39" src="img/facebook.png" width="39" loading="lazy"/></a>
+          <a href="https://x.com/braviumaiagency"><img alt="Twitter" height="39" src="img/twitter.png" width="39" loading="lazy"/></a>
+          <a href="#"><img alt="Instagram" height="39" src="img/instagram.png" width="39" loading="lazy"/></a>
+        </div>
+        <p class="copyright">Bravium AI Agency © 2025. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for deferred YouTube video loading
+    document.querySelectorAll('.hero-video').forEach(videoWrapper => {
+      const youtubeId = videoWrapper.dataset.youtubeid;
+      const playButton = videoWrapper.querySelector('.play-button');
+
+      if (playButton) {
+        playButton.addEventListener('click', () => {
+          const iframe = document.createElement('iframe');
+          iframe.setAttribute('src', `https://www.youtube.com/embed/FwOTs4UxQS4`);
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('title', 'AI Agents, Clearly Explained');
+          // No loading="lazy" for dynamically loaded iframes above the fold, if it's the LCP.
+          // If this section is always below the fold, you could add it back.
+          
+          videoWrapper.innerHTML = ''; // Clear thumbnail and button
+          videoWrapper.appendChild(iframe);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

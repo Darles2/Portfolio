@@ -1,0 +1,840 @@
+/* Removed @import url for Google Fonts - now handled in HTML head */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Font family declarations are here, ensure they match the Google Fonts in HTML */
+    font-family: 'Poppins', 'DM Sans', 'Merriweather', 'Segoe UI', sans-serif;
+    color: #111827;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+/* Utilities */
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header Styles --- */
+.header {
+    position: relative;
+    width: 100%;
+    height: 142px;
+    background: #2970E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.logo-img {
+    height: 109px;
+    width: auto;
+    position: absolute;
+    left: 323px;
+}
+
+.text-logo {
+    height: 103px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive adjustments for Header */
+@media (max-width: 1440px) {
+    .logo-img {
+        left: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        height: 120px;
+    }
+
+    .logo-img {
+        height: 80px;
+        left: 50px;
+    }
+
+    .text-logo {
+        height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 100px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .header-content {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .logo-img {
+        position: relative;
+        left: auto;
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    .text-logo {
+        position: relative;
+        left: auto;
+        transform: none;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo-img {
+        height: 45px;
+        margin-right: 10px;
+    }
+
+    .text-logo {
+        height: 35px;
+    }
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.hero-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text h2 { /* Added this for the "Why Choose Us" section */
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.hero-text h3 { /* Added this for the "Why Choose Us" section */
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 28px; /* Adjusted size for secondary heading */
+    line-height: 38px;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.hero-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-text li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #383838;
+}
+
+.hero-text li::before {
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #2970E4;
+    font-size: 16px;
+    top: 4px;
+}
+
+.hero-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Updated .hero-video for placeholder */
+.hero-video {
+    position: relative;
+    width: 568px;
+    height: 360px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: black; /* Background for when thumbnail loads */
+    overflow: hidden; /* Ensure content is clipped */
+}
+
+.hero-video img.youtube-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; /* Ensure thumbnail is below play button */
+}
+
+.hero-video .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px; /* Adjust size as needed for your play button icon */
+    height: 70px;
+    background: url('img/youtube_play_button.png') no-repeat center center; /* You NEED to create this image or use an SVG/Font Awesome icon */
+    background-size: contain;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.hero-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove iframe default border */
+    display: block; /* Ensure it takes full space */
+}
+
+
+/* Hero Button styling */
+.hero-button {
+    display: inline-block;
+    width: 640px;
+    max-width: 100%;
+    height: 48px;
+    background-color: #2970E4;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+    background-color: #1d5bc7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments for Hero */
+@media (max-width: 768px) {
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text h1, .hero-text h2 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 1.25rem;
+    }
+    .hero-text h3 {
+        font-size: 24px; /* Adjusted for responsive secondary heading */
+        line-height: 32px;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-text ul {
+        margin-bottom: 2rem;
+    }
+
+    .hero-text li {
+        font-size: 15px;
+    }
+
+    .hero-button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .hero-media {
+        width: 100%;
+    }
+
+    .hero-video {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-text h1, .hero-text h2 {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 1rem;
+    }
+    .hero-text h3 {
+        font-size: 20px; /* Adjusted for responsive secondary heading */
+        line-height: 28px;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .hero-text li {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-video {
+        height: 200px;
+    }
+
+    .hero-button {
+        font-size: 16px;
+        height: 42px;
+        line-height: 42px;
+    }
+}
+
+/* --- Divider Section --- */
+.divider {
+    width: 100%;
+    height: 142px;
+    background: #2970E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.divider-text {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35px;
+    color: white;
+    margin: 0 auto;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsive adjustments for Divider */
+@media (max-width: 768px) {
+    .divider {
+        height: auto;
+        padding: 20px;
+    }
+
+    .divider-text {
+        width: 100%;
+        font-size: 24px;
+        line-height: 1.3;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .divider {
+        padding: 15px;
+    }
+
+    .divider-text {
+        font-size: 20px;
+        white-space: normal;
+    }
+}
+
+/* --- Formula Section --- */
+.formula {
+    background: #f9fafb;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.formula h3 {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 63px;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.formula-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.formula-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formula-item h4 {
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Responsive adjustments for Formula */
+@media (max-width: 768px) {
+    .formula {
+        padding: 2.5rem 0;
+    }
+
+    .formula h3 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 1.5rem;
+    }
+
+    .formula-grid {
+        gap: 1.5rem;
+    }
+
+    .formula-item {
+        width: calc(50% - 0.75rem);
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formula {
+        padding: 2rem 0;
+    }
+
+    .formula h3 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 1.25rem;
+    }
+
+    .formula-grid {
+        gap: 1rem;
+    }
+
+    .formula-item {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonials h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #000;
+    font-weight: 700;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-item {
+    background: rgba(41, 112, 228, 0.08);
+    border-radius: 30px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.testimonial-item br {
+    display: none;
+}
+
+.stars {
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    color: #FFC107;
+    line-height: 1;
+}
+
+.testimonial-item p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.testimonial-item>:not(.stars):not(p) {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+/* Responsive Adjustments for Testimonials */
+@media (max-width: 768px) {
+    .testimonials h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonial-item {
+        padding: 2rem;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .stars {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-item p {
+        font-size: 15px;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials {
+        padding: 3rem 0;
+    }
+
+    .testimonials h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-item {
+        padding: 1.5rem;
+        min-height: 180px;
+    }
+
+    .stars {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .testimonial-item p {
+        font-size: 14px;
+        margin-top: 0.8rem;
+    }
+}
+
+/* --- Why Choose Us Section (reusing .hero styles) --- */
+/* The HTML uses .hero class for this section, so the .hero styles above apply */
+
+/* --- CTA Section Styles --- */
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+    background: #fff;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta-content h2 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 2rem;
+    max-width: 742px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2970E4;
+    color: #FFFFFF;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 206px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #1d5bc7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(41, 112, 228, 0.3);
+}
+
+/* Responsive Adjustments for CTA Section */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 0.8rem;
+    }
+
+    .cta-content p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 18px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 2.5rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .cta-content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        min-width: 150px;
+    }
+}
+
+/* --- Footer Styles --- */
+.footer {
+    width: 100%;
+    height: 224px;
+    background: #2970E4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    overflow-x: hidden;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39px;
+    height: 39px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+/* Specific rule for Facebook icon to make it round (if needed, otherwise remove) */
+.social-icons .facebook-icon {
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Responsive adjustments for Footer */
+@media (max-width: 768px) {
+    .footer {
+        height: 160px;
+        padding-bottom: 25px;
+    }
+    .footer-content {
+        gap: 15px;
+    }
+    .social-icons {
+        gap: 15px;
+    }
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+    }
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        height: 130px;
+        padding-bottom: 15px;
+    }
+    .footer-content {
+        gap: 10px;
+    }
+    .social-icons {
+        gap: 10px;
+    }
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+    .copyright {
+        font-size: 10px;
+        line-height: 16px;
+    }
+}
